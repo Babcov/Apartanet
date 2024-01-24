@@ -1,0 +1,10 @@
+<h1>Список квартир</h1>
+   <ul>
+   {% for property in properties %}
+       <li><a href="{% url 'property_detail' property.id %}">{{ property.title }}</a></li>
+   {% endfor %}
+   </ul>
+   <h1>{{ property.title }}</h1>
+   <p>{{ property.description }}</p>
+   <p>Цена: {{ property.price }}</p>
+   <!-- Отобразите остальную информацию о квартире -->
